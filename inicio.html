@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://www      .example.com/logo.jpg" alt="Logo" width="50">
+            </a>
+            <form class="d-flex mx-auto">
+                <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Buscar">
+                <button class="btn btn-outline-light" type="submit">Buscar</button>
+            </form>
+            <a class="btn btn-outline-light" href="cuenta.html">Cuenta</a>
+        </div>
+    </nav>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div>
+                <ul class="piola nav justify-content-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Home</a>
+                        <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item" href="home.html">Inicio</a></li>
+                            <li><a class="dropdown-item" href="home.html">Ofertas</a></li>
+                            <li><a class="dropdown-item" href="home.html">Novedades</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Configuracion.html">Configuración</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Masvendidos.html">Más vendidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MeVal.html">Mejor valorados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Carrito.html">Carrito</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center">Nombredelatienda me olvide</h1>
+    </div>
+
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <ol class ="carousel-indicators">
+            <li aira hidden="true" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
+            <li aira hidden="true"                                           data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/paginadeinicio/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="/paginadeinicio/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+            </div>
+            
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </a>
+
+    </div>
+
+    <div>
+        <h2 class="text-center mt-4">Productos destacados</h2>
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/imagenes/imagenes/001.png" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">Descripción breve del producto 1.</p>
+                        <p class="card-text">S/                           10.00</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Valoración: 4.5/5
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-secondary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/imagenes/imagenes/002.png" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 2</h5>
+                        <p class="card-text">Descripción breve del producto 2.</p>
+                        <p class="card-text">S/                           20.00</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Valoración: 4.0/5
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-secondary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/imagenes/imagenes/003.png" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 3</h5>
+                        <p class="card-text">Descripción breve del producto 3.</p>
+                        <p class="card-text">S/                           30.00</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Valoración: 4.8/5
+                    </div> 
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-secondary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/imagenes/imagenes/004.png" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 4</h5>
+                        <p class="card-text">Descripción breve del producto 4.</p>
+                        <p class="card-text">S/                           40.00</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Valoración: 4.2/5
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-secondary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/imagenes/imagenes/004.png" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 4</h5>
+                        <p class="card-text">Descripción breve del producto 4.</p>
+                        <p class="card-text">S/                           40.00</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Valoración: 4.2/5
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-secondary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/imagenes/imagenes/004.png" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 4</h5>
+                        <p class="card-text">Descripción breve del producto 4.</p>
+                        <p class="card-text">S/                           40.00</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Valoración: 4.2/5
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-secondary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/imagenes/imagenes/004.png" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 4</h5>
+                        <p class="card-text">Descripción breve del producto 4.</p>
+                        <p class="card-text">S/                           40.00</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Valoración: 4.2/5
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-secondary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/imagenes/imagenes/004.png" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 4</h5>
+                        <p class="card-text">Descripción breve del producto 4.</p>
+                        <p class="card-text">S/                           40.00</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Valoración: 4.2/5
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-secondary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+           
+
+                
+
+    </div>
+    
+</body>
+
+</html>
