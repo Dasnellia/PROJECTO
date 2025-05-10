@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar información de usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="box container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="profile-title">Edita tu perfil</h2>
+
+                <!-- Imagen de perfil -->
+                <div class="profile-image-container">
+                    <div class="profile-image-placeholder">Tu imagen de perfil</div>
+                    <input type="file" id="profileImageUpload" style="display: none;" accept="image/*">
+                </div>
+                <div class="change-photo-text">Cambiar foto</div>
+            </div>
+
+            <div class="col-md-8">
+                <!-- Formulario -->
+                <form>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+
+                    <button type="submit" class="btn-save">Guardar cambios</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
