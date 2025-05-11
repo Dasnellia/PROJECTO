@@ -1,0 +1,243 @@
+/* General */
+body {
+    background-color: #343541;
+}
+
+.box {
+    background-color: #1e2a45;
+    max-width: 1200px;
+    border-radius: 18px;
+    padding: 40px;
+    margin: 2rem auto;
+}
+
+/* Texto */
+.game-title,
+.profile-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.profile-title {
+    font-size: 1.8rem;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #d1dbe9;
+}
+
+.game-images-title {
+    color: #d1dbe9;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+/* Componentes multimedia */
+.trailer-container,
+.profile-image-container {
+    background-color: #2c3a58;
+    /*provisional hasta que le ponga imagenes*/
+    border-radius: 8px;
+    /*provisional hasta que le ponga imagenes*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid #3a4a6d;
+    /*provisional hasta que le ponga imagenes*/
+}
+
+.trailer-container {
+    height: 250px;
+}
+
+.profile-image-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #4a90e2;
+    cursor: pointer;
+    margin: 0 auto 2rem;
+}
+
+.profile-image-container:hover {
+    opacity: 0.8;
+}
+
+.trailer-placeholder,
+.profile-image-placeholder {
+    color: #d1dbe9;
+    text-align: center;
+}
+
+.trailer-placeholder {
+    font-size: 1.5rem;
+}
+
+.profile-image-placeholder {
+    font-size: 1.2rem;
+}
+
+.gameplay-scroll {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    margin-bottom: 2rem;
+}
+
+.gameplay-image {
+    min-width: 250px;
+    height: 140px;
+    background-color: #2c3a58;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d1dbe9;
+    border: 1px solid #3a4a6d;
+}
+
+/* Formularios y controles */
+.form-control,
+.review-textarea {
+    background-color: #2c3a58;
+    border: 1px solid #3a4a6d;
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.review-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-control:focus,
+.review-textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);
+}
+
+.form-control::placeholder,
+.review-textarea::placeholder {
+    color: #a0a8b8;
+}
+
+.form-label {
+    color: #d1dbe9;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    display: block;
+}
+
+/* Secciones especiales */
+.review-section {
+    background-color: #2c3a58;
+    color: #d1dbe9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid #3a4a6d;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1rem;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3a4a6d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d1dbe9;
+}
+
+/* Botones */
+.btn-proceed,
+.btn-send,
+.btn-play,
+.btn-save {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btn-proceed:hover,
+.btn-send:hover,
+.btn-play:hover,
+.btn-save:hover {
+    background-color: #3b7ed0;
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-send,
+.btn-save {
+    width: 100%;
+}
+
+/* Modal */
+.modal-content {
+    background-color: #1e2a45;
+    color: #ffffff;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding-top: 0;
+}
+
+.checkmark-box {
+    background-color: #4a90e2;
+    color: white;
+    font-size: 28px;
+    border-radius: 12px;
+    padding: 8px 16px;
+    display: inline-block;
+}
+
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 1;
+}
+
+/* Elementos interactivos */
+.change-photo-text {
+    color: #4a90e2;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.change-photo-text:hover {
+    color: #3b7ed0;
+}

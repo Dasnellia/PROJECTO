@@ -1,0 +1,87 @@
+.box {
+    background-color: #1e2a45;
+    color: white;
+    max-width: 900px;
+    border-radius: 18px;
+    padding: 40px;
+    margin: 2rem auto;
+}
+
+.profile-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.profile-image-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #2c3a58;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 3px solid #4a90e2;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile-image-placeholder {
+    font-size: 1.2rem;
+    color: #d1dbe9;
+    text-align: center;
+}
+
+.profile-image-container:hover {
+    opacity: 0.8;
+}
+
+.form-label {
+    color: #d1dbe9;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-control {
+    background-color: #2c3a58;
+    border: 1px solid #3a4a6d;
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.form-control:focus {
+    background-color: #2c3a58;
+    color: white;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);
+}
+
+.btn-save {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-save:hover {
+    background-color: #3b7ed0;
+}
+
+.change-photo-text {
+    color: #4a90e2;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
