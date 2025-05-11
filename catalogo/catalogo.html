@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Catálogo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/catalogo/catalogo.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/50x50?text=GZ" alt="GameZone Logo" width="50" class="rounded-circle border border-danger">
+            </a>
+            <form class="d-flex mx-auto w-50">
+                <input class="form-control me-2" type="search" placeholder="Buscar juegos..." aria-label="Buscar">
+                <button class="btn btn-outline-light" type="submit">Buscar</button>
+            </form>
+            <a class="btn btn-outline-light" href="cuenta.html">
+                <i class="bi bi-person-fill"></i> Mi Cuenta
+            </a>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="w-100">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Inicio</a>
+                        <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item" href="/paginadeinicio/inicio.html">Destacados</a></li>
+                            <li><a class="dropdown-item" href="/paginadeinicio/inicio.htm">Ofertas</a></li>
+                            <li><a class="dropdown-item" href="home.html">Próximos lanzamientos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="platformDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Plataformas</a>
+                        <ul class="dropdown-menu" aria-labelledby="platformDropdown">
+                            <li><a class="dropdown-item" href="#">PC</a></li>
+                            <li><a class="dropdown-item" href="#">PlayStation 5</a></li>
+                            <li><a class="dropdown-item" href="#">Xbox Series X</a></li>
+                            <li><a class="dropdown-item" href="#">Nintendo Switch</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/masvendidos/Masvendidos.html">Más vendidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MeVal.html">Mejor valorados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Carrito.html"><i class="bi bi-cart-fill"></i> Carrito</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="page-title">Catálogo de Juegos</h1>
+        
+        <div class="filter-section">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <label for="filtroGenero" class="form-label">Género</label>
+                    <select id="filtroGenero" class="form-select">
+                        <option value="todos" selected>Todos los géneros</option>
+                        <option value="accion">Acción</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="rpg">RPG</option>
+                        <option value="shooter">Shooter</option>
+                        <option value="estrategia">Estrategia</option>
+                        <option value="deportes">Deportes</option>
+                        <option value="terror">Terror</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-3">
+                    <label for="filtroPlataforma" class="form-label">Plataforma</label>
+                    <select id="filtroPlataforma" class="form-select">
+                        <option value="todas" selected>Todas las plataformas</option>
+                        <option value="pc">PC</option>
+                        <option value="ps5">PlayStation 5</option>
+                        <option value="xbox">Xbox Series X</option>
+                        <option value="switch">Nintendo Switch</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-3">
+                    <label for="filtroPrecio" class="form-label">Rango de precio</label>
+                    <select id="filtroPrecio" class="form-select">
+                        <option value="todos" selected>Cualquier precio</option>
+                        <option value="0-50">Menos de S/ 50</option>
+                        <option value="50-100">S/ 50 - S/ 100</option>
+                        <option value="100-150">S/ 100 - S/ 150</option>
+                        <option value="150-200">S/ 150 - S/ 200</option>
+                        <option value="200+">Más de S/ 200</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-3">
+                    <label for="filtroOrden" class="form-label">Ordenar por</label>
+                    <select id="filtroOrden" class="form-select">
+                        <option value="relevancia" selected>Relevancia</option>
+                        <option value="precio-asc">Precio: menor a mayor</option>
+                        <option value="precio-desc">Precio: mayor a menor</option>
+                        <option value="fecha">Fecha de lanzamiento</option>
+                        <option value="valoracion">Valoración</option>
+                        <option value="nombre-asc">Nombre: A-Z</option>
+                        <option value="nombre-desc">Nombre: Z-A</option>
+                    </select>
+                </div>
+                
+                <div class="col-12">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="filtroOfertas">
+                        <label class="form-check-label" for="filtroOfertas">Solo ofertas</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="filtroNuevos">
+                        <label class="form-check-label" for="filtroNuevos">Solo nuevos lanzamientos</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="filtroStock">
+                        <label class="form-check-label" for="filtroStock">Solo disponibles</label>
+                    </div>
+                </div>
+                
+                <div class="col-12 text-end">
+                    <button class="btn btn-primary me-2">Aplicar filtros</button>
+                    <button class="btn btn-outline-light">Limpiar filtros</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <!-- Juego 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="discount-badge">-30%</div>
+                    <img src="https://via.placeholder.com/300x400/333/ff0000?text=Elden+Ring" class="card-img-top game-cover" alt="Elden Ring">
+                    <div class="card-body">
+                        <h5 class="card-title">Elden Ring</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                            <span class="badge bg-secondary platform-badge">XBOX</span>
+                            <span class="badge bg-secondary platform-badge">PC</span>
+                        </div>
+                        <p class="card-text">Un épico RPG de acción en un mundo abierto creado por Hidetaka Miyazaki y George R.R. Martin.</p>
+                        <div class="rating mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="text-muted ms-2">4.8</span>
+                        </div>
+                        <p class="price">
+                            <span class="old-price">S/ 199.00</span>
+                            <span>S/ 139.30</span>
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-sm btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-sm btn-secondary">Detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Juego 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x400/333/ff0000?text=Zelda+TOTK" class="card-img-top game-cover" alt="Zelda Tears of the Kingdom">
+                    <div class="card-body">
+                        <h5 class="card-title">The Legend of Zelda: Tears of the Kingdom</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">SWITCH</span>
+                        </div>
+                        <p class="card-text">La esperada secuela de Breath of the Wild que expande el mundo de Hyrule.</p>
+                        <div class="rating mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span class="text-muted ms-2">5.0</span>
+                        </div>
+                        <p class="price">S/ 249.00</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-sm btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-sm btn-secondary">Detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Juego 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="discount-badge">-50%</div>
+                    <img src="https://via.placeholder.com/300x400/333/ff0000?text=Cyberpunk+2077" class="card-img-top game-cover" alt="Cyberpunk 2077">
+                    <div class="card-body">
+                        <h5 class="card-title">Cyberpunk 2077</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                            <span class="badge bg-secondary platform-badge">XBOX</span>
+                            <span class="badge bg-secondary platform-badge">PC</span>
+                        </div>
+                        <p class="card-text">RPG de acción en primera persona ambientado en el futuro distópico de Night City.</p>
+                        <div class="rating mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span class="text-muted ms-2">4.5</span>
+                        </div>
+                        <p class="price">
+                            <span class="old-price">S/ 179.00</span>
+                            <span>S/ 89.50</span>
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-sm btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-sm btn-secondary">Detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Juego 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x400/333/ff0000?text=GOW+Ragnarok" class="card-img-top game-cover" alt="God of War Ragnarök">
+                    <div class="card-body">
+                        <h5 class="card-title">God of War Ragnarök</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                        </div>
+                        <p class="card-text">Kratos y Atreus se embarcan en un viaje mítico para enfrentar el Ragnarök.</p>
+                        <div class="rating mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span class="text-muted ms-2">5.0</span>
+                        </div>
+                        <p class="price">S/ 229.00</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-sm btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-sm btn-secondary">Detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Juego 5 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x400/333/ff0000?text=Hogwarts+Legacy" class="card-img-top game-cover" alt="Hogwarts Legacy">
+                    <div class="card-body">
+                        <h5 class="card-title">Hogwarts Legacy</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                            <span class="badge bg-secondary platform-badge">XBOX</span>
+                            <span class="badge bg-secondary platform-badge">PC</span>
+                            <span class="badge bg-secondary platform-badge">SWITCH</span>
+                        </div>
+                        <p class="card-text">Un RPG de acción en el mundo mágico de Harry Potter.</p>
+                        <div class="rating mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span class="text-muted ms-2">4.7</span>
+                        </div>
+                        <p class="price">S/ 219.00</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-sm btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-sm btn-secondary">Detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Juego 6 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="discount-badge">-25%</div>
+                    <img src="https://via.placeholder.com/300x400/333/ff0000?text=RE4+Remake" class="card-img-top game-cover" alt="Resident Evil 4 Remake">
+                    <div class="card-body">
+                        <h5 class="card-title">Resident Evil 4 Remake</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                            <span class="badge bg-secondary platform-badge">XBOX</span>
+                            <span class="badge bg-secondary platform-badge">PC</span>
+                        </div>
+                        <p class="card-text">Reimaginación del clásico de terror y acción de Capcom.</p>
+                        <div class="rating mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="text-muted ms-2">4.8</span>
+                        </div>
+                        <p class="price">
+                            <span class="old-price">S/ 189.00</span>
+                            <span>S/ 141.75</span>
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-sm btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-sm btn-secondary">Detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Juego 7 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x400/333/ff0000?text=Starfield" class="card-img-top game-cover" alt="Starfield">
+                    <div class="card-body">
+                        <h5 class="card-title">Starfield</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">XBOX</span>
+                            <span class="badge bg-secondary platform-badge">PC</span>
+                        </div>
+                        <p class="card-text">El nuevo RPG espacial de los creadores de Skyrim y Fallout.</p>
+                        <div class="rating mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span class="text-muted ms-2">4.6</span>
+                        </div>
+                        <p class="price">S/ 239.00</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-sm btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-sm btn-secondary">Detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Juego 8 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="discount-badge">-40%</div>
+                    <img src="https://via.placeholder.com/300x400/333/ff0000?text=FFXVI" class="card-img-top game-cover" alt="Final Fantasy XVI">
+                    <div class="card-body">
+                        <h5 class="card-title">Final Fantasy XVI</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                        </div>
+                        <p class="card-text">La nueva entrega de la legendaria saga de RPGs de Square Enix.</p>
+                        <div class="rating mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="text-muted ms-2">4.7</span>
+                        </div>
+                        <p class="price">
+                            <span class="old-price">S/ 229.00</span>
+                            <span>S/ 137.40</span>
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-sm btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-sm btn-secondary">Detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav aria-label="Page navigation" class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link bg-dark border-dark" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                </li>
+                <li class="page-item active"><a class="page-link bg-primary border-primary" href="#">1</a></li>
+                <li class="page-item"><a class="page-link bg-dark border-dark" href="#">2</a></li>
+                <li class="page-item"><a class="page-link bg-dark border-dark" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link bg-dark border-dark" href="#">Siguiente</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="text-danger">GameZone</h5>
+                    <p>Tu tienda de videojuegos con los mejores precios y lanzamientos.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-danger">Contacto</h5>
+                    <p><i class="bi bi-envelope-fill"></i> contacto@gamezone.com</p>
+                    <p><i class="bi bi-telephone-fill"></i> +51 987 654 321</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-danger">Síguenos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-twitch"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-danger">
+            <div class="text-center">
+                <p>&copy; 2023 GameZone. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sistema de filtros (ejemplo básico)
+        document.getElementById('filtroGenero').addEventListener('change', function() {
+            console.log('Filtrando por género:', this.value);
+            // Aquí iría la lógica para filtrar los juegos
+        });
+        
+        document.getElementById('filtroPlataforma').addEventListener('change', function() {
+            console.log('Filtrando por plataforma:', this.value);
+            // Aquí iría la lógica para filtrar los juegos
+        });
+        
+        document.getElementById('filtroPrecio').addEventListener('change', function() {
+            console.log('Filtrando por precio:', this.value);
+            // Aquí iría la lógica para filtrar los juegos
+        });
+        
+        document.getElementById('filtroOrden').addEventListener('change', function() {
+            console.log('Ordenando por:', this.value);
+            // Aquí iría la lógica para ordenar los juegos
+        });
+    </script>
+</body>
+
+</html>
