@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #d10000;
+    --dark-color: #121212;
+    --light-dark: #1e1e1e;
+    --text-light: #f8f9fa;
+    --text-muted: #adb5bd;
+}
+
+body {
+    background-color: var(--dark-color);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-dark.bg-dark {
+    background-color: var(--dark-color) !important;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.navbar-light.bg-light {
+    background-color: var(--light-dark) !important;
+    border-bottom: 1px solid #333;
+}
+
+.nav-link, .dropdown-item {
+    color: var(--text-light) !important;
+}
+
+.nav-link:hover, .dropdown-item:hover {
+    color: var(--primary-color) !important;
+}
+
+.dropdown-menu {
+    background-color: var(--light-dark);
+    border: 1px solid #333;
+}
+
+.btn-outline-light {
+    color: var(--text-light);
+    border-color: var(--text-light);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #b00000;
+    border-color: #b00000;
+}
+
+.btn-secondary {
+    background-color: #333;
+    border-color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+    border-color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+}
+
+.table {
+    color: var(--text-light);
+    border-color: #333;
+}
+
+.table th {
+    border-color: #333;
+    background-color: var(--light-dark);
+}
+
+.table td {
+    border-color: #333;
+    background-color: var(--dark-color);
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover td {
+    background-color: rgba(209, 0, 0, 0.1);
+}
+
+.game-cover {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.form-control, .form-select {
+    background-color: #333;
+    border: 1px solid #444;
+    color: var(--text-light);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #444;
+    border-color: var(--primary-color);
+    color: var(--text-light);
+    box-shadow: 0 0 0 0.25rem rgba(209, 0, 0, 0.25);
+}
+
+.rating {
+    color: #ffc107;
+}
+
+.price {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.platform-badge {
+    font-size: 0.7rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.filter-section {
+    background-color: var(--light-dark);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border: 1px solid #333;
+}
+
+.page-title {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+}

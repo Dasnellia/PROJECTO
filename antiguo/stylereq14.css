@@ -1,0 +1,133 @@
+.box {
+    background-color: #1e2a45;
+    color: white;
+    max-width: 1200px;
+    border-radius: 18px;
+    padding: 40px 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.game-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.trailer-container {
+    background-color: #2c3a58;
+    height: 250px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #3a4a6d;
+}
+
+.trailer-placeholder {
+    font-size: 1.5rem;
+    color: #d1dbe9;
+}
+
+.gameplay-scroll {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    margin-bottom: 2rem;
+}
+
+.gameplay-image {
+    min-width: 250px;
+    height: 140px;
+    background-color: #2c3a58;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d1dbe9;
+    border: 1px solid #3a4a6d;
+}
+
+.review-section {
+    background-color: #2c3a58;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    height: 100%;
+    border: 1px solid #3a4a6d;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1rem;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3a4a6d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d1dbe9;
+}
+
+.review-textarea {
+    width: 100%;
+    border: 1px solid #3a4a6d;
+    border-radius: 8px;
+    padding: 12px;
+    min-height: 150px;
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+
+.review-textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.25);
+}
+
+.btn-send {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-send:hover {
+    background-color: #3b7ed0;
+}
+
+.btn-play {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+}
+
+.btn-play:hover {
+    background-color: #3b7ed0;
+}
+
+.game-images-title {
+    color: #d1dbe9;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}

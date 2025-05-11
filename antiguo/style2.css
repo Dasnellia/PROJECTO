@@ -1,0 +1,32 @@
+body {
+    background-color: #f0f4ff;
+}
+
+.modal-content {
+    background-color: #1e2a45;
+    color: #ffffff;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding-top: 0;
+}
+
+.checkmark-box {
+    background-color: #4a90e2;
+    color: white;
+    font-size: 28px;
+    border-radius: 12px;
+    padding: 8px 16px;
+    display: inline-block;
+}
+
+.btn-close-white {
+    filter: invert(1);
+}
