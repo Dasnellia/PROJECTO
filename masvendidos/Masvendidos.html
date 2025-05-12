@@ -1,110 +1,316 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>UniversoGamer - Más Vendidos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="masvendidos.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="https://www.example.com/logo.jpg" alt="Logo" width="50">
+                <img src="/imagenes/imagenes/LogoPrincipal.png" alt="UniversoGamer Logo" width="50" class="rounded-circle border border-danger">
             </a>
-            <form class="d-flex mx-auto">
-                <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Buscar">
+            <form class="d-flex mx-auto w-50">
+                <input class="form-control me-2" type="search" placeholder="Buscar juegos..." aria-label="Buscar">
                 <button class="btn btn-outline-light" type="submit">Buscar</button>
             </form>
-            <a class="btn btn-outline-light" href="cuenta.html">Cuenta</a>
+            <a class="btn btn-outline-light" href="/iniciarsesion/Pantalla1.html">
+                <i class="bi bi-person-fill"></i> Mi Cuenta
+            </a>
         </div>
     </nav>
 
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-
-            <div>
-                <ul class="piola nav justify-content-center">
+            <div class="w-100">
+                <ul class="nav justify-content-center">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Inicio</a>
                         <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-                            <li><a class="dropdown-item" href="/paginadeinicio/inicio.html">Inicio</a></li>
-                            <li><a class="dropdown-item" href="/paginadeinicio/inicio.html">Ofertas</a></li>
-                            <li><a class="dropdown-item" href="/paginadeinicio/inicio.html">Novedades</a></li>
+                            <li><a class="dropdown-item" href="/paginadeinicio/inicio.html">Destacados</a></li>
+                            <li><a class="dropdown-item" href="/paginadeinicio/inicio.htm">Ofertas</a></li>
+                            <li><a class="dropdown-item" href="/paginadeinicio/inicio.html">Próximos lanzamientos</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Catalogo.html">Catálogo</a>
+                        <a class="nav-link" href="/catalogo/catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="platformDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Plataformas</a>
+                        <ul class="dropdown-menu" aria-labelledby="platformDropdown">
+                            <li><a class="dropdown-item" href="#">PC</a></li>
+                            <li><a class="dropdown-item" href="#">PlayStation 5</a></li>
+                            <li><a class="dropdown-item" href="#">Xbox Series X</a></li>
+                            <li><a class="dropdown-item" href="#">Nintendo Switch</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Configuracion.html">Configuración</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Masvendidos.html">Más vendidos</a>
+                        <a class="nav-link active" href="/masvendidos/Masvendidos.html">Más vendidos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="MeVal.html">Mejor valorados</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Carrito.html">Carrito</a>
+                        <a class="nav-link" href="Carrito.html"><i class="bi bi-cart-fill"></i> Carrito</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <h1 class="display-2 col-md-5">
-        Descubre los<span><strong> más vendidos</strong></span>
-    </h1>
-
-
-    <div class="row">
-        <div class="col-md-3">
-            <h3 class="text-muted">
-                Filtrar por:
-
-            </h3>
+    <div class="container mt-4">
+        <h1 class="page-title">Descubre los <strong>más vendidos</strong></h1>
+        
+        <div class="filter-section">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <h4 class="text-muted mb-0">Filtrar por:</h4>
+                </div>
+                <div class="col-md-3">
+                    <select id="FiltroMasVendido" class="form-select">
+                        <option value="0" selected>Todos los juegos</option>
+                        <option value="1">Género</option>
+                        <option value="2">Precio</option>
+                        <option value="3">Fecha de lanzamiento</option>
+                        <option value="4">Valoración</option>
+                        <option value="5">Plataforma</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select id="FiltroGenero" class="form-select" style="display: none;">
+                        <option value="0" selected>Todos los géneros</option>
+                        <option value="1">Acción</option>
+                        <option value="2">Aventura</option>
+                        <option value="3">RPG</option>
+                        <option value="4">Shooter</option>
+                        <option value="5">Estrategia</option>
+                        <option value="6">Deportes</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-text">Precio</span>
+                        <input type="number" class="form-control" placeholder="Mínimo">
+                        <input type="number" class="form-control" placeholder="Máximo">
+                        <button class="btn btn-primary" type="button">Aplicar</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-3">
-            <select id="FiltroMasVendido" class="form-select" aria-label="Default select example">
-                <option value="0" selected>-</option>
-                <option value="1">Genero</option>
-                <option value="2">Precio</option>
-                <option value="3">Fecha de lanzamiento</option>
-                <option value="4">Valoración</option>
-
-            </select>
+        
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col" width="50">#</th>
+                        <th scope="col" width="100">Portada</th>
+                        <th scope="col">Nombre del Juego</th>
+                        <th scope="col">Género</th>
+                        <th scope="col">Plataformas</th>
+                        <th scope="col">Valoración</th>
+                        <th scope="col">Lanzamiento</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col" width="120">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Juego 1 -->
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><img src="/imagenes/imagenes/juegos/EldenRing.jpg" class="game-cover" alt="Elden Ring"></td>
+                        <td><strong>Elden Ring</strong></td>
+                        <td>RPG, Acción</td>
+                        <td>
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                            <span class="badge bg-secondary platform-badge">XBOX</span>
+                            <span class="badge bg-secondary platform-badge">PC</span>
+                        </td>
+                        <td class="rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="text-muted ms-2">4.8</span>
+                        </td>
+                        <td>25/02/2022</td>
+                        <td class="price">S/ 199.00</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary w-100 mb-1">Comprar</button>
+                            <button class="btn btn-sm btn-secondary w-100">Detalles</button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Juego 2 -->
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><img src="/imagenes/imagenes/juegos/LoZTofk.jpg" class="game-cover" alt="Zelda TOTK"></td>
+                        <td><strong>The Legend of Zelda: Tears of the Kingdom</strong></td>
+                        <td>Aventura, Acción</td>
+                        <td>
+                            <span class="badge bg-secondary platform-badge">SWITCH</span>
+                        </td>
+                        <td class="rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span class="text-muted ms-2">5.0</span>
+                        </td>
+                        <td>12/05/2023</td>
+                        <td class="price">S/ 249.00</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary w-100 mb-1">Comprar</button>
+                            <button class="btn btn-sm btn-secondary w-100">Detalles</button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Juego 3 -->
+                    <tr>
+                        <th scope="row">3</th>
+                        <td><img src="/imagenes/imagenes/juegos/hogwartlegacy.jpeg" class="game-cover" alt="Hogwarts Legacy"></td>
+                        <td><strong>Hogwarts Legacy</strong></td>
+                        <td>RPG, Aventura</td>
+                        <td>
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                            <span class="badge bg-secondary platform-badge">XBOX</span>
+                            <span class="badge bg-secondary platform-badge">PC</span>
+                        </td>
+                        <td class="rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span class="text-muted ms-2">4.5</span>
+                        </td>
+                        <td>10/02/2023</td>
+                        <td class="price">S/ 219.00</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary w-100 mb-1">Comprar</button>
+                            <button class="btn btn-sm btn-secondary w-100">Detalles</button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Juego 4 -->
+                    <tr>
+                        <th scope="row">4</th>
+                        <td><img src="/imagenes/imagenes/juegos/god-of-war-valhalla.jpg" class="game-cover" alt="God of War Ragnarök"></td>
+                        <td><strong>God of War Ragnarök</strong></td>
+                        <td>Acción, Aventura</td>
+                        <td>
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                        </td>
+                        <td class="rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span class="text-muted ms-2">5.0</span>
+                        </td>
+                        <td>09/11/2022</td>
+                        <td class="price">S/ 229.00</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary w-100 mb-1">Comprar</button>
+                            <button class="btn btn-sm btn-secondary w-100">Detalles</button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Juego 5 -->
+                    <tr>
+                        <th scope="row">5</th>
+                        <td><img src="/imagenes/imagenes/juegos/starfield.jpeg" class="game-cover" alt="Starfield"></td>
+                        <td><strong>Starfield</strong></td>
+                        <td>RPG, Sci-Fi</td>
+                        <td>
+                            <span class="badge bg-secondary platform-badge">XBOX</span>
+                            <span class="badge bg-secondary platform-badge">PC</span>
+                        </td>
+                        <td class="rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span class="text-muted ms-2">4.2</span>
+                        </td>
+                        <td>06/09/2023</td>
+                        <td class="price">S/ 239.00</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary w-100 mb-1">Comprar</button>
+                            <button class="btn btn-sm btn-secondary w-100">Detalles</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </div>
-    
-    <div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Imagendeljuego</th>
-                    <th scope="col">Nombredeljuego</th>
-                    <th scope="col">Genero</th>
-                    <th scope="col">Valoración</th>
-                    <th scope="col">Fecha de lanzamiento</th>
-                    <th scope="col">Precio</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                </tr>
-            </tbody>
-        </table>
+        
+        <nav aria-label="Page navigation" class="mt-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link bg-dark border-dark" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                </li>
+                <li class="page-item active"><a class="page-link bg-primary border-primary" href="#">1</a></li>
+                <li class="page-item"><a class="page-link bg-dark border-dark" href="#">2</a></li>
+                <li class="page-item"><a class="page-link bg-dark border-dark" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link bg-dark border-dark" href="#">Siguiente</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="text-danger">UniversoGamer</h5>
+                    <p>Tu tienda de videojuegos con los mejores precios y lanzamientos.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-danger">Contacto</h5>
+                    <p><i class="bi bi-envelope-fill"></i> contacto@UniversoGamer.com</p>
+                    <p><i class="bi bi-telephone-fill"></i> +51 987 654 321</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-danger">Síguenos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-twitch"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-danger">
+            <div class="text-center">
+                <p>&copy; 2023 UniversoGamer. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Mostrar/ocultar filtros según selección
+        document.getElementById('FiltroMasVendido').addEventListener('change', function() {
+            const filtroGenero = document.getElementById('FiltroGenero');
+            if(this.value === '1') {
+                filtroGenero.style.display = 'block';
+            } else {
+                filtroGenero.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>

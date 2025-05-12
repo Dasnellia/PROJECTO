@@ -4,47 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Tienda</title>
+    <title>Universo Gamer - Tienda de Videojuegos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/paginadeinicio/inicio.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="inicio.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">    
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="https://www      .example.com/logo.jpg" alt="Logo" width="50">
+                <img src="/imagenes/imagenes/LogoPrincipal.png" alt="Universo Gamer Logo" width="50" class="rounded-circle border border-danger">
             </a>
-            <form class="d-flex mx-auto">
-                <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Buscar">
+            <form class="d-flex mx-auto w-50">
+                <input class="form-control me-2" type="search" placeholder="Buscar juegos..." aria-label="Buscar">
                 <button class="btn btn-outline-light" type="submit">Buscar</button>
             </form>
-            <a class="btn btn-outline-light" href="cuenta.html">Cuenta</a>
+            <a class="btn btn-outline-light" href="/iniciarsesion/Pantalla1.html">
+                <i class="bi bi-person-fill"></i> Mi Cuenta
+            </a>
         </div>
     </nav>
 
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            
-            <div>
-                <ul class="piola nav justify-content-center">
+            <div class="w-100">
+                <ul class="nav justify-content-center">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Home</a>
+                            aria-expanded="false">Inicio</a>
                         <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-                            <li><a class="dropdown-item" href="/paginadeinicio/inicio.html">Inicio</a></li>
+                            <li><a class="dropdown-item" href="/paginadeinicio/inicio.html">Destacados</a></li>
                             <li><a class="dropdown-item" href="/paginadeinicio/inicio.htm">Ofertas</a></li>
-                            <li><a class="dropdown-item" href="home.html">Novedades</a></li>
+                            <li><a class="dropdown-item" href="home.html">Próximos lanzamientos</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Catalogo.html">Catálogo</a>
+                        <a class="nav-link" href="/catalogo/catalogo.html">Catálogo</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Configuracion.html">Configuración</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="platformDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Plataformas</a>
+                        <ul class="dropdown-menu" aria-labelledby="platformDropdown">
+                            <li><a class="dropdown-item" href="#">PC</a></li>
+                            <li><a class="dropdown-item" href="#">PlayStation 5</a></li>
+                            <li><a class="dropdown-item" href="#">Xbox Series X</a></li>
+                            <li><a class="dropdown-item" href="#">Nintendo Switch</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/masvendidos/Masvendidos.html">Más vendidos</a>
@@ -53,7 +62,7 @@
                         <a class="nav-link" href="MeVal.html">Mejor valorados</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Carrito.html">Carrito</a>
+                        <a class="nav-link" href="Carrito.html"><i class="bi bi-cart-fill"></i> Carrito</a>
                     </li>
                 </ul>
             </div>
@@ -61,180 +70,272 @@
     </nav>
 
     <div class="container mt-4">
-        <h1 class="text-center">Nombredelatienda me olvide</h1>
+        <h1 class="text-center">Universo Gamer</h1>
+        <p class="text-center">Tienda de videojuegos</p>
     </div>
 
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-        <ol class ="carousel-indicators">
-            <li aira hidden="true" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
-            <li aira hidden="true"                                           data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img  src="/paginadeinicio/imagen1.jpg" class="d-block w-100 img-fluid" alt="Imagen 1" width="500" height="600">
+    <div class="container">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner rounded">
+                <div class="carousel-item active">
+                    <img src="/imagenes/imagenes/pancartas/Sin título-2.png" class="d-block w-100" alt="Ofertas de Verano">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded">
+                        <h5>Ofertas de Verano</h5>
+                        <p>Hasta 70% de descuento en juegos seleccionados</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/1200x400/333/ff0000?text=Nuevos+Lanzamientos" class="d-block w-100" alt="Nuevos Lanzamientos">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded">
+                        <h5>Nuevos Lanzamientos</h5>
+                        <p>Descubre los juegos más recientes</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/1200x400/333/ff0000?text=Ediciones+Coleccionistas" class="d-block w-100" alt="Ediciones Coleccionistas">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded">
+                        <h5>Ediciones Coleccionistas</h5>
+                        <p>Artículos exclusivos para los verdaderos fans</p>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="/paginadeinicio/imagen2.jpg" class="d-block w-100 img-fluid" alt="Imagen 2" width="500" height="600">
-            </div>
-            
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </a>
-
     </div>
 
-    <div>
-        <h2 class="text-center mt-4">Productos destacados</h2>
-        <div class="row mt-4">
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="/imagenes/imagenes/001.jpg" class="card-img-top cuadrado" alt="Producto 1">
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Juegos Destacados</h2>
+        <div class="row g-4">
+            <!-- Juego 1 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100">
+                    <div class="discount-badge">-30%</div>
+                    <img src="/imagenes/imagenes/juegos/EldenRing.jpg" class="card-img-top game-cover" alt="Elden Ring">
                     <div class="card-body">
-                        <h5 class="card-title">Producto 1</h5>
-                        <p class="card-text">Descripción breve del producto 1.</p>
-                        <p class="card-text">S/                           10.00</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <h5 class="card-title">Elden Ring</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                            <span class="badge bg-secondary platform-badge">XBOX</span>
+                            <span class="badge bg-secondary platform-badge">PC</span>
+                        </div>
+                        <p class="card-text">Un épico RPG de acción en un mundo abierto creado por Hidetaka Miyazaki y George R.R. Martin.</p>
+                        <p class="price">
+                            <span class="text-decoration-line-through text-muted me-2">S/ 199.00</span>
+                            <span>S/ 139.30</span>
+                        </p>
+                        <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
                     </div>
-                    <div class="card-footer text-muted">
-                        Valoración: 4.5/5
-                    </div>
-                    <div class="card-footer text-muted">
-                        <a href="#" class="btn btn-secondary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="/imagenes/imagenes/002.jpg" class="card-img-top cuadrado" alt="Producto 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 2</h5>
-                        <p class="card-text">Descripción breve del producto 2.</p>
-                        <p class="card-text">S/                           20.00</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Valoración: 4.0/5
-                    </div>
-                    <div class="card-footer text-muted">
-                        <a href="#" class="btn btn-secondary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="/imagenes/imagenes/003.jpg" class="card-img-top cuadrado img-fluid cuadrado" alt="Producto 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 3</h5>
-                        <p class="card-text">Descripción breve del producto 3.</p>
-                        <p class="card-text">S/                           30.00</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Valoración: 4.8/5
-                    </div> 
-                    <div class="card-footer text-muted">
-                        <a href="#" class="btn btn-secondary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="/imagenes/imagenes/004.jpg" class="card-img-top cuadrado" alt="Producto 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 4</h5>
-                        <p class="card-text">Descripción breve del producto 4.</p>
-                        <p class="card-text">S/                           40.00</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Valoración: 4.2/5
-                    </div>
-                    <div class="card-footer text-muted">
-                        <a href="#" class="btn btn-secondary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="/imagenes/imagenes/004.jpg" class="card-img-top cuadrado" alt="Producto 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 4</h5>
-                        <p class="card-text">Descripción breve del producto 4.</p>
-                        <p class="card-text">S/                           40.00</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Valoración: 4.2/5
-                    </div>
-                    <div class="card-footer text-muted">
-                        <a href="#" class="btn btn-secondary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="/imagenes/imagenes/004.jpg" class="card-img-top cuadrado" alt="Producto 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 4</h5>
-                        <p class="card-text">Descripción breve del producto 4.</p>
-                        <p class="card-text">S/                           40.00</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Valoración: 4.2/5
-                    </div>
-                    <div class="card-footer text-muted">
-                        <a href="#" class="btn btn-secondary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="/imagenes/imagenes/004.jpg" class="card-img-top cuadrado" alt="Producto 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 4</h5>
-                        <p class="card-text">Descripción breve del producto 4.</p>
-                        <p class="card-text">S/                           40.00</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Valoración: 4.2/5
-                    </div>
-                    <div class="card-footer text-muted">
-                        <a href="#" class="btn btn-secondary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="/imagenes/imagenes/004.jpg" class="card-img-top cuadrado" alt="Producto 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 4</h5>
-                        <p class="card-text">Descripción breve del producto 4.</p>
-                        <p class="card-text">S/                           40.00</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Valoración: 4.2/5
-                    </div>
-                    <div class="card-footer text-muted">
-                        <a href="#" class="btn btn-secondary">Ver más</a>
+                    <div class="card-footer text-muted d-flex justify-content-between">
+                        <span>Valoración: 4.9/5</span>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
                     </div>
                 </div>
             </div>
             
+            <!-- Juego 2 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100">
+                    <img src="/imagenes/imagenes/juegos/LoZTofk.jpg" class="card-img-top game-cover" alt="Zelda: Tears of the Kingdom">
+                    <div class="card-body">
+                        <h5 class="card-title">The Legend of Zelda: Tears of the Kingdom</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">SWITCH</span>
+                        </div>
+                        <p class="card-text">La esperada secuela de Breath of the Wild que expande el mundo de Hyrule.</p>
+                        <p class="price">S/ 249.00</p>
+                        <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted d-flex justify-content-between">
+                        <span>Valoración: 4.8/5</span>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
             
-           
-
-                
-
+            <!-- Juego 3 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100">
+                    <div class="discount-badge">-50%</div>
+                    <img src="/imagenes/imagenes/juegos/cyberpunk.avif" class="card-img-top game-cover" alt="Cyberpunk 2077">
+                    <div class="card-body">
+                        <h5 class="card-title">Cyberpunk 2077</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                            <span class="badge bg-secondary platform-badge">XBOX</span>
+                            <span class="badge bg-secondary platform-badge">PC</span>
+                        </div>
+                        <p class="card-text">RPG de acción en primera persona ambientado en el futuro distópico de Night City.</p>
+                        <p class="price">
+                            <span class="text-decoration-line-through text-muted me-2">S/ 179.00</span>
+                            <span>S/ 89.50</span>
+                        </p>
+                        <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted d-flex justify-content-between">
+                        <span>Valoración: 4.5/5</span>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Juego 4 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100">
+                    <img src="/imagenes/imagenes/juegos/god-of-war-valhalla.jpg" class="card-img-top game-cover" alt="God of War Ragnarök">
+                    <div class="card-body">
+                        <h5 class="card-title">God of War Ragnarök</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                        </div>
+                        <p class="card-text">Kratos y Atreus se embarcan en un viaje mítico para enfrentar el Ragnarök.</p>
+                        <p class="price">S/ 229.00</p>
+                        <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted d-flex justify-content-between">
+                        <span>Valoración: 4.9/5</span>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Juego 5 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100">
+                    <img src="/imagenes/imagenes/juegos/hogwartlegacy.jpeg" class="card-img-top game-cover" alt="Hogwarts Legacy">
+                    <div class="card-body">
+                        <h5 class="card-title">Hogwarts Legacy</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                            <span class="badge bg-secondary platform-badge">XBOX</span>
+                            <span class="badge bg-secondary platform-badge">PC</span>
+                            <span class="badge bg-secondary platform-badge">SWITCH</span>
+                        </div>
+                        <p class="card-text">Un RPG de acción en el mundo mágico de Harry Potter.</p>
+                        <p class="price">S/ 219.00</p>
+                        <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted d-flex justify-content-between">
+                        <span>Valoración: 4.7/5</span>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Juego 6 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100">
+                    <div class="discount-badge">-25%</div>
+                    <img src="/imagenes/imagenes/juegos/ResidentEVIL4Remake.jpg" class="card-img-top game-cover" alt="Resident Evil 4 Remake">
+                    <div class="card-body">
+                        <h5 class="card-title">Resident Evil 4 Remake</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                            <span class="badge bg-secondary platform-badge">XBOX</span>
+                            <span class="badge bg-secondary platform-badge">PC</span>
+                        </div>
+                        <p class="card-text">Reimaginación del clásico de terror y acción de Capcom.</p>
+                        <p class="price">
+                            <span class="text-decoration-line-through text-muted me-2">S/ 189.00</span>
+                            <span>S/ 141.75</span>
+                        </p>
+                        <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted d-flex justify-content-between">
+                        <span>Valoración: 4.8/5</span>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Juego 7 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100">
+                    <img src="/imagenes/imagenes/juegos/starfield.jpeg" class="card-img-top game-cover" alt="Starfield">
+                    <div class="card-body">
+                        <h5 class="card-title">Starfield</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">XBOX</span>
+                            <span class="badge bg-secondary platform-badge">PC</span>
+                        </div>
+                        <p class="card-text">El nuevo RPG espacial de los creadores de Skyrim y Fallout.</p>
+                        <p class="price">S/ 239.00</p>
+                        <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted d-flex justify-content-between">
+                        <span>Valoración: 4.6/5</span>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Juego 8 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100">
+                    <div class="discount-badge">-40%</div>
+                    <img src="/imagenes/imagenes/juegos/finalfantasy.jpg" class="card-img-top game-cover" alt="Final Fantasy XVI">
+                    <div class="card-body">
+                        <h5 class="card-title">Final Fantasy XVI</h5>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary platform-badge">PS5</span>
+                        </div>
+                        <p class="card-text">La nueva entrega de la legendaria saga de RPGs de Square Enix.</p>
+                        <p class="price">
+                            <span class="text-decoration-line-through text-muted me-2">S/ 229.00</span>
+                            <span>S/ 137.40</span>
+                        </p>
+                        <a href="#" class="btn btn-primary w-100">Agregar al carrito</a>
+                    </div>
+                    <div class="card-footer text-muted d-flex justify-content-between">
+                        <span>Valoración: 4.7/5</span>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="text-danger">Universo Gamer</h5>
+                    <p>Tu tienda de videojuegos con los mejores precios y lanzamientos.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-danger">Contacto</h5>
+                    <p><i class="bi bi-envelope-fill"></i> contacto@UniversoGamer.com</p>
+                    <p><i class="bi bi-telephone-fill"></i> +51 *imaginate un numero*</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-danger">Síguenos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="https/facebook.com" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-twitch"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-danger">
+            <div class="text-center">
+                <p>&copy; 2025 Universo Gamer. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
     
 </body>
 

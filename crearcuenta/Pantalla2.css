@@ -1,0 +1,162 @@
+#div1 {
+    position: absolute;
+    top: 0;
+    right: 0; 
+    width: 50vw;  
+    height: 100vh; 
+    z-index: 1;
+    overflow: hidden;
+}
+
+#div2 {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 3; /* Más alto que el formulario */
+    padding: 25px;
+    color: rgb(0, 0, 0);
+}
+
+#titulo-logo {
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+#texto-principal {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-48%, -180%);
+    color: white;
+    font-size: 30px;
+    font-family: 'Sofia Sans', sans-serif;
+    z-index: 3;
+    text-align: center;
+    
+}
+
+#texto-secundario{
+     position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-42%, 50%);
+    color: white;
+    font-size: 15px;
+    font-family: 'Sofia Sans', sans-serif;
+    z-index: 3;
+    text-align: center;
+}
+
+#div9 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;          /* Ocupa el 50% del ancho de la pantalla */
+    height: 100vh;        /* Ocupa el 100% de la altura disponible */
+    display: flex;
+    align-items: center;  /* Centra verticalmente el formulario */
+    justify-content: center; /* Centra horizontalmente el formulario */
+    background-color: transparent; /* Transparente para que el logo se vea */
+    z-index: 1; /* Un nivel debajo del logo */
+}
+
+
+.titulo-principal{
+    position: absolute;
+    left: 0;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+}
+
+.logo-principal {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.fondo-crear {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoomInOut 5s ease-in-out infinite;
+}
+
+.google-btn-container {
+    position: absolute;
+    top: 55%;
+    left: 21%; 
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 250px;
+}
+
+.custom-google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-family: 'Sofia Sans', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-google-btn:hover {
+    background-color: #e6e6e6d3;
+    color: white;
+}
+
+.formulario-registro {
+    width: 100%;
+    max-width: 600px; /* Puedes modificar el ancho si lo necesitas */
+    height: calc(100vh - 100px); /* Ocupa todo el alto menos el margen superior */
+    margin-left: 0;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+}
+
+#titulo-registro{
+    margin-bottom: 50px;
+}
+
+#boton-enviar {
+    background-color: red;
+    border-color: red;
+    color: white;
+    margin-top: 10px;
+    padding: 8px 5px;       /* Aumenta alto y ancho del botón */
+    font-size: 16px;          /* Tamaño del texto del botón */
+    border-radius: 10px;       /* Bordes más redondeados */
+    width: 200px;              /* Que ocupe todo el ancho disponible */
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+#boton-enviar:hover {
+    background-color: darkred;
+    border-color: darkred;
+}   
+
+
+.text-button {
+    flex-grow: 1;
+    text-align: center;
+}
+
+@keyframes zoomInOut {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
